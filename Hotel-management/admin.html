@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login info | Local storage</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registered Users</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userList">
+            <!-- User data will be populated here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Function to display users
+        function displayUsers() {
+            const users = JSON.parse(localStorage.getItem("users") || "[]");
+            const userList = document.getElementById("userList");
+            userList.innerHTML = ""; // Clear the existing list
+
+            users.forEach((user, index) => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                    <td><button onclick="deleteUser(${index})">Delete</button></td>
+                `;
+                userList.appendChild(tr);
+            });
+        }
+
+        // Function to delete a user
+        function deleteUser(index) {
+            let users = JSON.parse(localStorage.getItem("users") || "[]");
+            users.splice(index, 1); // Remove the user from the array
+            localStorage.setItem("users", JSON.stringify(users)); // Update local storage
+            displayUsers(); // Refresh the user list
+        }
+
+        // Load the users when the page is loaded
+        document.addEventListener("DOMContentLoaded", displayUsers);
+    </script>
+</body>
+</html>

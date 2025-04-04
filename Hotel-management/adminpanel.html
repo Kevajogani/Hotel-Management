@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Reservations</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Reservation List</h2>
+    <table id="reservationsTable" border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>People</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+        // Load reservations from local storage
+        let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
+        const table = document.getElementById("reservationsTable");
+
+        // Function to render reservations in the table
+        function renderReservations() {
+            // Clear existing rows (except header)
+            table.innerHTML = `
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>People</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>`;
+
+            reservations.forEach((reservation, index) => {
+                const row = table.insertRow();
+                row.insertCell(0).innerText = reservation.username;
+                row.insertCell(1).innerText = reservation.email;
+                row.insertCell(2).innerText = reservation.contact;
+                row.insertCell(3).innerText = reservation.people;
+                row.insertCell(4).innerText = reservation.date;
+                row.insertCell(5).innerText = reservation.time;
+
+                // Add a delete button
+                const deleteCell = row.insertCell(6);
+                const deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.onclick = function () {
+                    deleteReservation(index);
+                };
+                deleteCell.appendChild(deleteButton);
+            });
+        }
+
+        // Function to delete a reservation by index
+        function deleteReservation(index) {
+            reservations.splice(index, 1); // Remove reservation from array
+            localStorage.setItem("reservations", JSON.stringify(reservations)); // Update local storage
+            renderReservations(); // Re-render the table
+        }
+
+        // Initial render
+        renderReservations();
+    </script>
+
+</body>
+</html>

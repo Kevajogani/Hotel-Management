@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <!-- Signup Form -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <input type="email" placeholder="Enter your email" id="signupEmail" required>
+                <input type="password" placeholder="Create password" id="signupPassword" required>
+                <input type="password" placeholder="Confirm password" id="confirmPassword" required>
+                <button type="button" onclick="signup()">Signup Now</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Enter your email" id="loginEmail" required>
+                <input type="password" placeholder="Enter your password" id="loginPassword" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="button" onclick="login()">Login Now</button>
+            </form>
+            <p>Forgot password? <a href="#">Reset</a></p>
+            <p>Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Signup</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

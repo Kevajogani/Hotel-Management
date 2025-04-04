@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Bites | Taste the difference</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Gallary">Gallary</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Reserve">Reservation</a></li>
+                <li><a href="login.html">login/signup</a></li>
+            </ul>
+
+            <div class="icon">
+                <input type="text" id="searchBar" onclick="clearSearchBar()" placeholder="Search for food items..." />
+    
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+               <a href="cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="men_text">
+                <h1>QR-Bites<span>Taste</span><br>the<span> Difference!!!</span></h1>
+            </div>
+            <div class="main_image">
+                <img src="image/main_img.png">
+            </div>
+        </div>
+        <div class="main_btn">
+            <a href="#Menu">Order Now</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+
+            <!-- this is card begining -->
+            <div class="menu_card" id="burger">
+                <div class="menu_image">
+                    <img src="image/buger.jpg">
+                </div>
+
+                <!-- <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div> -->
+
+                <div class="menu_info">
+                    <h2 id="burger">Burger</h2>
+                    <p>
+                        Delicious veggie patty topped with fresh lettuce, tomatoes, and zesty sauce                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Burger', 20)">Order Now</button>
+                </div>
+            </div> 
+            <!-- this is card ending -->
+
+
+            <!-- this is new card begining -->
+            <div class="menu_card" id="pasta">
+                <div class="menu_image">
+                    <img src="image/pasta.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>pasta</h2>
+                    <p>
+                        Al dente spaghetti coated in a creamy Alfredo sauce with garden vegetables.                    </p>
+                    <h3>$10.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('pasta', 10)">Order Now</button>
+                </div>
+            </div> 
+            <!---------- this is card ending --------->
+
+
+            <!------- this is new card begining -------->
+            <div class="menu_card" id="lasagna">
+                <div class="menu_image">
+                    <img src="image/lasagna.webp">
+                </div>
+                <div class="menu_info">
+                    <h2>lasagna</h2>
+                    <p>
+                        Layers of pasta, rich marinara sauce, and melted cheese, baked to perfection.                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Lasagna', 20)">Order Now</button>
+                </div>
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="chocolate">
+
+                <div class="menu_image">
+                    <img src="image/chocolate_Drink.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>Drink</h2>
+                    <p>
+                        Indulgent blend of rich chocolate and creamy milk, ideal for chocolate lovers.                    </p>
+                    <h3>$15.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Chocolate shake', 15)">Order Now</button>
+                </div>
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>            
+
+            <div class="menu_card" id="pizza">
+
+                <div class="menu_image">
+                    <img src="image/pizza.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>pizza</h2>
+                    <p>
+                        Crispy crust topped with tangy tomato sauce, mozzarella, and fresh vegetables.                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Burger', 20)">Order Now</button>
+                </div>
+
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>            
+
+            <div class="menu_card" id="rissotto">
+
+                <div class="menu_image">
+                    <img src="image/risotto primavera.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>Risotto primavera</h2>
+                    <p>
+                        Creamy Arborio rice cooked with seasonal vegetables fresh herbs and Parmesan.                    </p>
+                    <h3>$40.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Risotto primavera', 40)">Order Now</button>
+                </div>
+
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="juce">
+                <div class="menu_image">
+                    <img src="image/juse.jpg">
+                </div>
+
+                <div class="menu_info">
+                    <h2>Fresh Juse</h2>
+                    <p>
+                        Refreshing blend of seasonal fruits, bursting with vitamins and natural goodness.                    </p>
+                    <h3>$10.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Burger', 10)">Order Now</button>
+                </div>
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="Noodles">
+
+                <div class="menu_image">
+                    <img src="image/Zucchini Noodles.jpeg">
+                </div>
+                <div class="menu_info">
+                    <h2>Zucchini Noodles</h2>
+                    <p>
+                        Spiralized zucchini sautéed in garlic-infused olive oil with cherry tomatoes and fresh basil                    </p>
+                    <h3>$25.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Zucchini Noodles', 25)">Order Now</button>
+                </div>
+
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="cake">
+
+                <div class="menu_image">
+                    <img src="image/chocolate.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>Chocolate cake</h2>
+                    <p>
+                        Decadent chocolate dessert with rich flavors, perfect for sweet cravings.
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Chocolate cake', 20)">Order Now</button>
+                </div>
+
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="ice cream">
+
+                <div class="menu_image">
+                    <img src="image/ice_cream.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>Ice Cream</h2>
+                    <p>
+                        Creamy frozen treat in various flavors, topped with sprinkles and syrup.                    </p>
+                    <h3>$10.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Burger', 10)">Order Now</button>
+                </div>
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="spanchi">
+
+                <div class="menu_image">
+                    <img src="image/Spanchi.jpg">
+                </div>
+                <div class="menu_info">
+                    <h2>Spanchi</h2>
+                    <p>
+                        Savory spinach and creamy cheese wrapped in a crispy pastry and olive oil.
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Burger', 20)">Order Now</button>
+                </div>
+
+            </div> 
+            <!------ this is card ending ------->
+
+            <!------ this is new card begining ------>
+            <div class="menu_card" id="shushi">
+
+                <div class="menu_image">
+                    <img src="image/shushi.jpeg">
+                </div>
+                <div class="menu_info">
+                    <h2>Avocado Shushi</h2>
+                    <p>
+                        Delicate rolls featuring ripe avocado, wrapped in seasoned rice and seaweed.</p>
+                    <h3>$15.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button class="menu_btn" onclick="addToCart('Avocado Shushi', 20)">Order Now</button>
+                </div>
+            <!------ this is card ending ------->
+
+            </div> 
+            
+        </div>
+
+    </div>
+            <!------------- end of menu section ----------------->
+
+
+
+    <!--Gallary-->
+
+    <div class="gallary" id="Gallary">
+        <h1>Our<span>Gallary</span></h1>
+
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img src="image/gallary_4.jpg">
+                <h3>Chef's Special</h3>
+                <p>
+                    Avocado Tartare :  refreshing tartare made from diced avocado, mango, and lime, served with tortilla chips.                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_2.jpg">
+
+                <h3>Blueberry Cupcakes</h3>
+                <p>
+                    Light and fluffy cupcakes bursting with fresh blueberries, topped with creamy lemon frosting.                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/caprese salad.jpg">
+
+                <h3>Caprese Salad with Burrata</h3>
+                <p>
+                    A modern twist on the classic Caprese, with creamy burrata, heirloom tomatoes, and a drizzle of balsamic glaze.                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/Food-wine.webp">
+
+                <h3>Event : Food & Wine Pairing </h3>
+                <p>
+                    Special evenings where each dish is paired with carefully selected wines. Sommeliers or wine experts guide diners through the pairing experience.                </p>
+                <a href="#" class="gallary_btn">Know more</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/culture-cusine-2.webp">
+
+                <h3>Event : Cultural Cuisine Night</h3>
+                <p>
+                    A rotating series of dinners highlighting the cuisine from a specific country or region, offering a chance to experience authentic international dishes.                </p>
+                <a href="#" class="gallary_btn">Know more</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/Gala-dinner.jpeg">
+
+                <h3>Event : Gala Dinner</h3>
+                <p>
+                    A luxurious multi-course dining event with entertainment, exquisite décor, and gourmet cuisine.                </p>
+                <a href="#" class="gallary_btn">Know more</a>
+            </div>
+
+        </div>
+
+    </div>
+
+            <!------- review text area---- -->
+
+            <div class="review-container">
+                <img src="image/Review-1.png" alt="Image-1" class="review-image">
+                <div class="review-form">
+                    <textarea id="reviewTextarea" placeholder="Write your review here..." rows="5"></textarea>
+                    <button id="submitButton">Submit Review</button>
+                    <span id="submitMessage" class="submit-message"></span>
+                </div>
+            </div>
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_1.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Emily Johnson </h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "The digital dining experience at Qr-bites was fantastic! The seamless QR code ordering system made everything quick and easy. The menu is so well-organized, and I loved how interactive it was, allowing me to see detailed descriptions and images of each dish. It truly enhanced the dining experience, and I’ll definitely be coming back!!!"
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_2.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Michael Brown</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "The online reservation system at Qr-bites was smooth and efficient. I booked a table in just a few clicks, and the confirmation was instant. When I arrived, the restaurant was ready for us, with no hassle or wait time. It was a breeze, and I appreciate how organized the whole process was! The real-time updates on reservation status and reminders added an extra layer of convenience, ensuring everything went perfectly as planned."
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_3.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Sarah Miller</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "Qr-bites took dining to the next level. The QR code system eliminates the need for waiting on staff for orders, and everything is in the palm of your hand! The interface is so user-friendly,someone like me who isn't too tech-savvy. The speed and convenience it offers made the experience feel effortless, and I could easily customize my order with just a few taps.  Qr-bites has mastered the balance between technology and great dining, making it a top choice for a hassle-free meal!"
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_4.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">Victor Franklin</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        "Qr-bites offers a modern twist on dining, and I was impressed! Using their QR code for ordering felt futuristic, and everything from customizing my meal to checking out was effortless. The app interface is simple to navigate, and it made the overall experience more enjoyable. Highly recommend! Plus, the quick response time from the kitchen ensured that my meal arrived fresh and hot, making it a seamless and delightful dining experience."
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- reservation policy -->
+    <div class="event__content">        
+        <div class="event__details">
+          <h2 class="section__header">Reservation policy</h2>
+          <p class="section__description">
+            A reservation table for an upcoming event is essential for organizing guest attendance. It includes details like the event name, date, time, venue, and reservation specifics such as the number of seats, the reservation ID, and the booker's name. It also notes any special requests and provides contact information for follow-up. The confirmation status ensures clarity on whether reservations are confirmed, pending, or need further action, helping to ensure a smooth and well-organized event.
+          </p>
+        </div>
+        <div class="event__image">
+            <img src="image/event.jpg" alt="event" />
+          </div>
+      </div>
+
+
+    <!--Order-->
+
+    <div class="order" id="Reserve">
+        <h1><span>reserve</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="image/order_image.png">
+            </div>
+
+            <!-- Starting of Form -->
+            <form id="reservationForm">
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="your name" name="username" required>
+                </div>
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="your email" name="email" required>
+                </div>
+                <div class="input">
+                    <p>Contact Number</p>
+                    <input type="tel" placeholder="your number" name="contact" required>
+                </div>
+                <div class="input">
+                    <p>For how many people</p>
+                    <input type="number" min="1" max="10" placeholder="number of people" name="people" required>
+                </div>
+                <div class="input">
+                    <p>Date</p>
+                    <input type="date" name="date" required>
+                </div>
+                <div class="input">
+                    <p>Time</p>
+                    <input type="time" name="time" required>
+                </div>
+                <button type="submit" class="order_btn">Reserve NOW</button>
+            </form>
+
+        </div>
+
+    </div>
+     <!--About-->
+
+     <div class="about" id="About">
+        <div class="about_main">
+
+            <div class="image">
+                <img src="image/Food-Plate.png">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why Choose us?</h3>
+                <p>
+                    Welcome to Qr-bites, where we blend technology with culinary excellence to create a unique digital dining experience. Our innovative QR code system allows you to effortlessly browse menus, customize orders, and make payments—all at your fingertips. Enjoy our carefully crafted dishes, made from the finest ingredients, in a warm and inviting atmosphere. Whether you're dining with family, friends, or colleagues, we strive to make every visit memorable. Join us at Qr-bites and discover the future of dining today!
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Experience now</a>
+
+    </div>
+
+
+
+    <!--Team-->
+
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="image/chef1.png">
+
+                <div class="info">
+                    <h2 class="name">Chef Tom Colicchio</h2>
+                    <p class="bio">
+                       An influential chef  known for his farm-to-table philosophy and as a judge on Top Chef.
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef2.png">
+
+                <div class="info">
+                    <h2 class="name">Chef Ana Rose</h2>
+                    <p class="bio">
+                        A Slovenian chef celebrated for her innovative approach to traditional Slovenian cuisine.
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef Judy Joo</h2>
+                    <p class="bio">
+                        A Korean chef known for his expertise in Korean cuisine and television appearances.
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef4.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef Marcus</h2>
+                    <p class="bio">
+                        A celebrated chef known for his Ethiopian and Swedish cuisine fusion.
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>India</p>
+                <p>USA</p>
+                <p>Japan</p>
+                <p>Italy</p>
+                <p>Thailand</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p>Home</p>
+                <p>About</p>
+                <p>Menu</p>
+                <p>Gallary</p>
+                <p>Order</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+91 111 222 333</p>
+                <p>+91 111 222 333</p>
+                <p>qrbites@gmail.com</p>
+                <p>qrbitesinfo@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>Fast Delivery</p>
+                <p>Easy Payments</p>
+                <p>24 x 7 Service</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follow Us</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+        <p class="end">Design and styled by<span><i class="fa-solid fa-face-grin"></i> Keval jogani</span></p>
+
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

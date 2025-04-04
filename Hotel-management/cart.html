@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="cart.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <h3>Total: $<span id="total-price">0</span></h3>
+        <button onclick="clearCart()">Checkout</button>
+    </div>
+
+    <!-- Include the external JavaScript file -->
+    <script src="cart.js"></script>
+
+    <script>
+        // Load the cart items when the page loads
+        window.onload = loadCart;
+    </script>
+
+</body>
+</html>
